@@ -1,0 +1,142 @@
+/* Body background with animated gradient */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #4e9c81, #34d9c0, #b0e0e6);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Chat container */
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    background-color: #ffffffdd;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background-color: #0078d7;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.chat-box {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    max-height: 550px;
+}
+
+/* Message bubbles */
+.user-message, .bot-message {
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: #e0f7fa;
+    align-self: flex-end;
+    text-align: right;
+    color: #0078d7;
+}
+
+.bot-message {
+    background-color: #f1f0f0;
+    align-self: flex-start;
+    color: #333;
+}
+
+/* Style for the entire input area */
+.input-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #f1f0f0; /* Light background for input area */
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+
+/* Style for the text input with gradient background */
+#user-input {
+    flex: 1;
+    padding: 12px 40px 12px 15px; /* Padding to give space for the button on the right */
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    color: #ffffff; /* Text color */
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+
+
+
+    background-clip: padding-box; /* Ensures gradient does not affect padding */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* Style for the send button */
+button {
+    position: absolute;
+    right: 10px; /* Position the button to the right inside the input area */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff; /* Icon color */
+    font-size: 20px; /* Size of the send icon */
+}
+
+/* Rotate the icon to make it look like a paper airplane (for send action) */
+button i {
+    transform: rotate(45deg);
+}
+
+/* Hover effect on the send button */
+button:hover {
+    color: #ffaf7b; /* Change icon color on hover */
+}
+
+/* Optional: Add a focus effect for the input field when active */
+#user-input:focus {
+    border-color: #ffaf7b; /* Highlight border on focus */
+}
+
+/* Add a slight animation for the input field gradient */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Applying gradient animation to the input box */
+#user-input {
+    background-size: 200% 200%; /* Gradient covers a larger area */
+    animation: gradientAnimation 5s ease infinite; /* Adds a subtle animation to the gradient */
+}
